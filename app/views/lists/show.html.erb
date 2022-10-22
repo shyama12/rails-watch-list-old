@@ -1,0 +1,8 @@
+<%= @list.name %>
+<% @list.movies.each do |movie| %>
+  <%= movie.title %>
+  <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+  <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Sure?" } %>
+<% end %>
+<%= link_to "Add a movie", new_list_bookmark_path(@list) %>
+<%= link_to "Home", lists_path %>
