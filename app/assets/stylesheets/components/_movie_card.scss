@@ -1,0 +1,71 @@
+.movies-content {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.movie-card-show {
+  width: 600px;
+  height: 500px;
+  box-shadow: 0 0 10px lightgray;
+
+  img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+
+}
+
+.movie-card-content {
+  padding: 20px;
+  background-color: white;
+  height: 40%;
+}
+
+.movie-card-content-head {
+  display: flex;
+  align-items: center;
+}
+
+.movie-card-content-title {
+  font-weight: bolder;
+}
+
+.movie-card-content-rating {
+  color: #989EA4;
+}
+
+.movie-card-content-star {
+  color: $yellow;
+}
+
+.movie-card-content-overview {
+  color: #989EA4;
+  font-size: 0.8rem;
+}
+
+.quote-and-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  font-size: 0.8rem;
+  font-weight: regular;
+
+  i {
+    font-size: 1.2rem;
+  }
+
+  a {
+    color: $red;
+    text-decoration: none;
+  }
+}
+
+.quote {
+  display: block;
+}

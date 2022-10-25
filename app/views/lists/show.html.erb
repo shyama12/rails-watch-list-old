@@ -1,8 +1,35 @@
-<%= @list.name %>
-<% @list.movies.each do |movie| %>
-  <%= movie.title %>
-  <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-  <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Sure?" } %>
-<% end %>
-<%= link_to "Add a movie", new_list_bookmark_path(@list) %>
-<%= link_to "Home", lists_path %>
+<div class="wrapper">
+  <div class="banner-show">
+    <div class="yellow-count">
+      <%= @list.movies.count %> <%=  @list.movies.count==1? "movie" : "movies" %>
+    </div>
+    <h1><%= @list.name %></h1>
+  </div>
+  <div class="container">
+    <div class="movies-wrapper">
+      <div class="movies-heading">
+          <%= link_to "add a movie", new_list_bookmark_path(@list) %>
+      </div>
+      <div class="movies-content">
+        <% @list.movies.each do |movie| %>
+        <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+          <div class="movie-card-show">
+            <%= image_tag movie.poster_url, alt: 'image for movie', class: 'img-movie-cover' %>
+            <div class="movie-card-content">
+              <div class="movie-card-content-head">
+                <div class="movie-card-content-title"><%= movie.title %></div>
+                <div class="movie-card-content-rating">&nbsp;&#8226; <%= movie.rating %> </div>
+                <div class="movie-card-content-star">&nbsp;<i class="fa-solid fa-star"></i></div>
+              </div>
+              <div class="movie-card-content-overview"><%= movie.overview %></div>
+              <div class="quote-and-delete">
+                <div class="quote"><i class="fa-solid fa-quote-left"></i>&nbsp;Some quote here.</div>
+                <%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Sure?" } %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

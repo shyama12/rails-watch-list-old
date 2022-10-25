@@ -1,22 +1,28 @@
 
 <div class="wrapper">
-<div class="banner-index">
-<h1>Welcome to your lists!</h1>
-</div>
+  <div class="banner-index">
+    <h1>Welcome to your lists!</h1>
+  </div>
 
 
-<div class="list-index-content">
-
-  <% @lists.each do |list| %>
-  <%= link_to list_path(list) do %>
-    <div class="list-card-index">
-    <%= image_tag 'cinema', alt: 'image for list', class: 'img-list-cover' %>
-    <div class="list-card-content">
-      <%= link_to list.name, list_path(list)%>
+  <div class="container">
+    <div class="lists-wrapper">
+      <div class="lists-heading">
+          <h3>My Lists</h3>
+          <%= link_to "Create a movie list", new_list_path, class: "green-btn" %>
+      </div>
+      <div class="list-index-content">
+        <% @lists.each do |list| %>
+          <%= link_to list_path(list) do %>
+            <div class="list-card-index">
+              <%= image_tag 'cinema', alt: 'image for list', class: 'img-list-cover' %>
+              <div class="list-card-name">
+                <%= list.name %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
-    </div>
-    <% end %>
-  <% end %>
-</div>
-<%= link_to "Create new List", new_list_path %>
+  </div>
 </div>

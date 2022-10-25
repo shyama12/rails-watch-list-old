@@ -1,0 +1,42 @@
+.banner-show {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(asset_path('cinema'));
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  h1 {
+    color: white;
+  }
+}
+
+.yellow-count {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: $yellow;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.movies-heading {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  a {
+    background-color: $success;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+}
+
+.movies-wrapper {
+  padding: 100px 0;
+}
