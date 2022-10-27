@@ -11,6 +11,7 @@ require 'json'
 puts 'Clearing the db'
 Bookmark.destroy_all
 Movie.destroy_all
+List.destroy_all
 puts 'Cleaned up'
 
 serialized_content = URI.open('http://tmdb.lewagon.com/movie/top_rated?api_key=<your_api_key>').read
