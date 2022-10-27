@@ -2,6 +2,7 @@
 <div class="wrapper">
   <div class="banner-index">
     <h1>Welcome to your lists!</h1>
+    <h3 data-controller="typed"></h3>
   </div>
 
 
@@ -15,7 +16,7 @@
         <% @lists.each do |list| %>
           <%= link_to list_path(list) do %>
             <div class="list-card-index">
-              <%= image_tag 'cinema', alt: 'image for list', class: 'img-list-cover' %>
+              <%= cl_image_tag 'xezx5qrvpruwbrpep6vj', alt: 'image for list', class: 'img-list-cover' %>
               <div class="list-card-name">
                 <%= list.name %>
               </div>

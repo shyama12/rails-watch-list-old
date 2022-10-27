@@ -1,18 +1,11 @@
-.movies-content {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  padding: 10px 0;
-}
-
 .movie-card-show {
-  width: 600px;
-  height: 500px;
+  width: 500px;
+  height: 450px;
   box-shadow: 0 0 10px lightgray;
 
   img {
     width: 100%;
-    height: 60%;
+    height: 55%;
     object-fit: cover;
     object-position: top;
   }
@@ -23,12 +16,13 @@
 .movie-card-content {
   padding: 20px;
   background-color: white;
-  height: 40%;
+  height: 45%;
 }
 
 .movie-card-content-head {
   display: flex;
   align-items: center;
+  height: 20%;
 }
 
 .movie-card-content-title {
@@ -46,6 +40,8 @@
 .movie-card-content-overview {
   color: #989EA4;
   font-size: 0.8rem;
+  height: 60%;
+  overflow: hidden;
 }
 
 .quote-and-delete {
@@ -55,6 +51,7 @@
   padding-top: 10px;
   font-size: 0.8rem;
   font-weight: regular;
+  height: 20%;
 
   i {
     font-size: 1.2rem;

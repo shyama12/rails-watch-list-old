@@ -1,0 +1,10 @@
+<div class="add-movie-form">
+  <h3>Add a new movie to your list</h3>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%# <%= f.association :movie %>
+    <%# Tried tom select.. UI is working, not logic %>
+    <%= f.input :movie, collection: Movie.all, include_hidden: false, input_html: {multiple: true, class: "multiple-select", data: { controller: 'tom-select' } } %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>

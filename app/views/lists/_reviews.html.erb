@@ -1,0 +1,13 @@
+<div class="reviews-list">
+<h3>Reviews</h3>
+  <% list.reviews.each do |review| %>
+    <% (review.rating).times do %>
+    <div class="active-star"><i class="fa-solid fa-star"></i></div>
+    <% end %>
+    <% (5 - review.rating).times do %>
+    <div class="inactive-star"><i class="fa-regular fa-star"></i></div>
+    <% end %>
+    <p><%= review.content %></p>
+    <hr>
+  <% end %>
+</div>

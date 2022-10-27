@@ -23,6 +23,15 @@
   border-radius: 5px;
 }
 
+.movies-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
 .movies-heading {
   display: flex;
   justify-content: flex-end;
@@ -38,5 +47,42 @@
 }
 
 .movies-wrapper {
-  padding: 100px 0;
+  padding: 50px 10%;
+}
+
+
+.add-movie-form {
+  padding: 50px 0;
+  width: 50%;
+  margin: 0px auto;
+}
+
+.reviews-show {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  padding: 10px;
+}
+
+.reviews-list {
+  flex-grow: 1;
+}
+
+.add-review-form {
+  background: white;
+  width: 45%;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.active-star {
+  color: $yellow;
+  display: inline;
+}
+
+.inactive-star {
+  color: $yellow;
+  display: inline;
 }

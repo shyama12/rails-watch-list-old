@@ -1,13 +1,14 @@
 .banner-index {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 400px;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(asset_path('cinema.jpg'));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://res.cloudinary.com/ddud9fe2r/image/upload/v1666724204/xezx5qrvpruwbrpep6vj.avif');
   background-size: cover;
   background-position: center;
 
-  h1 {
+  h1, h3 {
     color: white;
   }
 }
